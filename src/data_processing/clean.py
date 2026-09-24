@@ -46,9 +46,11 @@ def clean_data(df):
     df['owner'] = df['owner'].fillna(conditional_owners)
 
     # fill the seller_type based on the price
-    df['seller_type'] = df['seller_type'].fillna(df['selling_price'].mode()[0])
+    df['seller_type'] = df['seller_type'].fillna(df['seller_type'].mode()[0])
 
 
+    # remove the duplicates
+    df = df.drop_duplicates()
 
 
     return df
