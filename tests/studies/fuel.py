@@ -38,5 +38,3 @@ def plot_fuel_analysis(df):
 
     plt.tight_layout()
     plt.show()
-
-plot_fuel_analysis(df)

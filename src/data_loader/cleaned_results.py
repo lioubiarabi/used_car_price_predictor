@@ -1,6 +1,6 @@
 import pandas as pd
 
-def load_raw_data(file_path = "../../data/raw/car-prices.csv"):
+def load_cleaned_data(file_path = "../../data/processed/cleaned_results.csv"):
     # fetch data from csv file
 
     try:

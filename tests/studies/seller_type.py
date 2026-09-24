@@ -1,8 +1,11 @@
 from src.data_loader.fetch import load_raw_data
 import pandas as pd
 
+from src.data_loader.cleaned_results import load_cleaned_data
+
+cleaned_df = load_cleaned_data()
 df = load_raw_data()
-df_column = df['seller_type']
+df_column = cleaned_df['seller_type']
 
 counts = df_column.value_counts()
 percentages = df_column.value_counts(normalize=True) * 100
